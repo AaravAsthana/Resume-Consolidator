@@ -2,6 +2,65 @@
 
 The Resume Consolidator is an application that **automates** the process of transforming raw resume PDFs into a *standardized*, *structured* format and then rendering them into new, professionally *formatted* PDFs. It acts like a digital assembly line, where users upload their resumes, an AI intelligently extracts and organizes the information, and a polished PDF is generated for download.
 
+## ⚙️ Installation & Setup Guide
+
+This project uses **Poetry** to manage dependencies for both the backend (Flask API) and frontend (Streamlit UI). Follow the instructions below to set up and run both environments correctly.
+
+---
+
+### 🧱 Prerequisites
+
+- **Python ≥ 3.12**
+- **Poetry** (Install via: `pip install poetry`)
+- **wkhtmltopdf** (required by `pdfkit` for HTML-to-PDF rendering)
+
+  - **Download**: https://wkhtmltopdf.org/downloads.html
+  - ⚠️ Make sure to **add it to your system PATH** so `wkhtmltopdf` can be called from the terminal.
+
+---
+
+### 📁 1. Clone the Repository
+
+```bash
+git clone https://github.com/AaravAsthana/Resume-Consolidator.git
+cd Resume-Consolidator
+```
+### 🔧 2. Backend Setup (Flask + PDF Generator)
+Navigate to the backend/ directory and install dependencies via Poetry.
+
+```bash
+cd backend
+poetry install
+```
+### 🔐 Set Up Environment Variables
+Create a .env file in the backend/ folder with the following:
+
+```env
+GEMINI_API_KEY=your_google_gemini_api_key_here
+```
+▶️ Run the Flask API
+Start the Flask development server:
+
+```bash
+poetry run python src/api.py
+```
+The server will run at: http://localhost:5000
+
+### 🎨 3. Frontend Setup (Streamlit UI)
+Navigate to the frontend/ directory and set up the Poetry environment:
+
+```bash
+cd ../frontend
+poetry install
+```
+
+▶️ Run the Streamlit App
+Start the frontend app using Poetry:
+
+```bash
+poetry run streamlit run app.py
+```
+The Streamlit UI will open at: http://localhost:8501
 
 ## Visual Overview
 
