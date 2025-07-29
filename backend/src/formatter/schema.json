@@ -1,0 +1,96 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "full_name": { "type": "string" },
+    "current_job": { "type": "string" },
+    "image_base64": {
+      "type": "string",
+      "format": "uri"    
+    },
+    "contact": {
+      "type": "object",
+      "properties": {
+        "email": { "type": "string" },
+        "phone": { "type": "string" },
+        "linkedin": { "type": "string" },
+        "github": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "sections": {
+      "type": "object",
+      "properties": {
+        "about_me": { "type": "string" },
+        "references": { "type": "string" },
+        "education": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "degree": { "type": "string" },
+              "institution": { "type": "string" },
+              "start_date": { "type": "string" },
+              "end_date": { "type": "string" },
+              "location": { "type": "string" },
+              "details": { "type": "string" }
+            },
+            "required": ["degree", "institution"]
+          }
+        },
+        "experience": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "company": { "type": "string" },
+              "position": { "type": "string" },
+              "start_date": { "type": "string" },
+              "end_date": { "type": "string" },
+              "location": { "type": "string" },
+              "details": { "type": "string" }
+            },
+            "required": ["company", "position"]
+          }
+        },
+        "skills": {
+          "type": "object",
+          "patternProperties": {
+            ".*": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          }
+        },
+        "misc": {
+        "type": "object",
+        "patternProperties": {
+          ".*": {
+            "oneOf": [
+              { "type": "string" },
+              {
+                "type": "array",
+                "items": {
+                  "oneOf": [
+                    { "type": "string" },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "name": { "type": "string" },
+                        "description": { "type": "string" }
+                      },
+                      "required": ["name", "description"]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      }
+      },
+      "additionalProperties": true
+    }
+  },
+  "required": ["full_name", "contact", "sections"]
+}

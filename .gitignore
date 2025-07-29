@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+dist/
+build/
+*.log
+.env
+uploads/
+
+# Node.js (frontend)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Frontend build
+/frontend/dist/
+/frontend/build/
+/frontend/.vite/
+
+# OS/System files
+.DS_Store
+Thumbs.db
+
+# IDE settings
+.vscode/
+.idea/
+
+# Temporary
+*.tmp
+*.bak
+*.swp
+*.lock
+
+# PDFs or generated output
+*.pdf
+
+# Poetry and virtual environments
+.poetry/
+*.venv/
+*.env/

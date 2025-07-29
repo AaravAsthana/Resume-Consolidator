@@ -1,0 +1,29 @@
+/* src/theme/index.css */
+
+/* 1) CSS variables (colors, spacing, fonts) */
+:root {
+  --color-primary: #CEAB93;
+  --color-accent:  #E3CAA5;
+  --color-bg:      #AD8B73;
+  --color-card:    #FFFBE9;
+  --font-heading:  '', sans-serif;
+  --font-body:     'Inter', sans-serif;
+}
+
+/* 2) Base element tweaks */
+body {
+  background-color: var(--color-bg);
+  font-family: var(--font-body);
+}
+h2, h3, h4 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+}
+h1.ui-heading {
+    padding-top: 50px;
+     height: 150px ;
+     font-family: 'Playfair Display';
+     color: #FFFBE9;
+     font-size: xxx-large;
+     text-align: center;
+}

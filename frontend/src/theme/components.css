@@ -1,0 +1,253 @@
+/* src/theme/components.css */
+
+/* ----------------------------- */
+/* File Upload Box (Uiverse)     */
+/* ----------------------------- */
+.file-upload-form {
+  width: 500;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.file-upload-label input {
+  display: none;
+}
+.file-upload-label svg {
+  height: 50px;
+  fill: #E3CAA5;
+  margin-bottom: 20px;
+}
+.file-upload-label {
+  cursor: pointer;
+  background-color: #E3CAA5;
+  padding: 45px 60px;
+  border-radius: 50px;
+  border: 2px dashed #FFFBE9;
+  box-shadow: 0px 0px 200px -50px rgba(0, 0, 0, 0.719);
+}
+.file-upload-design {
+  display: flex;
+  flex-direction: row  ;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.browse-button {
+  background-color: rgb(82, 82, 82);
+  padding: 5px 15px;
+  border-radius: 10px;
+  color: white;
+  transition: all 0.3s;
+}
+.browse-button:hover {
+  background-color: rgb(14, 14, 14);
+}
+
+/* ----------------------------- */
+/* Progress Cards                */
+/* ----------------------------- */
+.ui-progress {
+  display: flex;
+  flex-direction: row;
+  gap: 1.3rem;
+  margin-top: 1.2rem;
+}
+.ui-progress-item {
+  background: var(--color-card);
+  padding: 0.5rem;
+  border-radius: 10px ;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ui-download-btn {
+  background-color: var(--color-accent);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  transition: background-color 0.2s;
+}
+.ui-download-btn:hover {
+  background-color: #CEAB93;
+}
+
+/* ----------------------------- */
+/* Loader (Banter Loader)        */
+/* ----------------------------- */
+.banter-loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 72px;
+  height: 72px;
+  margin-left: -36px;
+  margin-top: -36px;
+}
+.banter-loader__box {
+  float: left;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+}
+.banter-loader__box:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #734606;
+}
+.banter-loader__box:nth-child(3n) {
+  margin-right: 0;
+  margin-bottom: 6px;
+}
+.banter-loader__box:nth-child(1):before,
+.banter-loader__box:nth-child(4):before {
+  margin-left: 26px;
+}
+.banter-loader__box:nth-child(3):before {
+  margin-top: 52px;
+}
+.banter-loader__box:last-child {
+  margin-bottom: 0;
+}
+
+/* Keyframes & animations */
+@keyframes moveBox-1 {
+  9.0909% { transform: translate(-26px, 0); }
+  18.1818% { transform: translate(0, 0); }
+  27.2727% { transform: translate(0, 0); }
+  36.3636% { transform: translate(26px, 0); }
+  45.4545% { transform: translate(26px, 26px); }
+  54.5454% { transform: translate(26px, 26px); }
+  63.6363% { transform: translate(26px, 26px); }
+  72.7272% { transform: translate(26px, 0); }
+  81.8181% { transform: translate(0, 0); }
+  90.9090% { transform: translate(-26px, 0); }
+  100% { transform: translate(0, 0); }
+}
+.banter-loader__box:nth-child(1) { animation: moveBox-1 4s infinite; }
+
+@keyframes moveBox-2 {
+  9.0909% { transform: translate(0, 0); }
+  18.1818% { transform: translate(26px, 0); }
+  27.2727% { transform: translate(0, 0); }
+  36.3636% { transform: translate(26px, 0); }
+  45.4545% { transform: translate(26px, 26px); }
+  54.5454% { transform: translate(26px, 26px); }
+  63.6363% { transform: translate(26px, 26px); }
+  72.7272% { transform: translate(26px, 26px); }
+  81.8181% { transform: translate(0, 26px); }
+  90.9090% { transform: translate(0, 26px); }
+  100% { transform: translate(0, 0); }
+}
+.banter-loader__box:nth-child(2) { animation: moveBox-2 4s infinite; }
+
+@keyframes moveBox-3 {
+  9.0909% { transform: translate(-26px, 0); }
+  18.1818% { transform: translate(-26px, 0); }
+  27.2727% { transform: translate(0, 0); }
+  36.3636% { transform: translate(-26px, 0); }
+  45.4545% { transform: translate(-26px, 0); }
+  54.5454% { transform: translate(-26px, 0); }
+  63.6363% { transform: translate(-26px, 0); }
+  72.7272% { transform: translate(-26px, 0); }
+  81.8181% { transform: translate(-26px, -26px); }
+  90.9090% { transform: translate(0, -26px); }
+  100% { transform: translate(0, 0); }
+}
+.banter-loader__box:nth-child(3) { animation: moveBox-3 4s infinite; }
+
+@keyframes moveBox-4 {
+  9.0909% { transform: translate(-26px, 0); }
+  18.1818% { transform: translate(-26px, 0); }
+  27.2727% { transform: translate(-26px, -26px); }
+  36.3636% { transform: translate(0, -26px); }
+  45.4545% { transform: translate(0, 0); }
+  54.5454% { transform: translate(0, -26px); }
+  63.6363% { transform: translate(0, -26px); }
+  72.7272% { transform: translate(0, -26px); }
+  81.8181% { transform: translate(-26px, -26px); }
+  90.9090% { transform: translate(-26px, 0); }
+  100% { transform: translate(0, 0); }
+}
+.banter-loader__box:nth-child(4) { animation: moveBox-4 4s infinite; }
+
+@keyframes moveBox-5 {
+  9.0909% { transform: translate(0, 0); }
+  18.1818% { transform: translate(0, 0); }
+  27.2727% { transform: translate(0, 0); }
+  36.3636% { transform: translate(26px, 0); }
+  45.4545% { transform: translate(26px, 0); }
+  54.5454% { transform: translate(26px, 0); }
+  63.6363% { transform: translate(26px, 0); }
+  72.7272% { transform: translate(26px, 0); }
+  81.8181% { transform: translate(26px, -26px); }
+  90.9090% { transform: translate(0, -26px); }
+  100% { transform: translate(0, 0); }
+}
+.banter-loader__box:nth-child(5) { animation: moveBox-5 4s infinite; }
+
+@keyframes moveBox-6 {
+  9.0909% { transform: translate(0, 0); }
+  18.1818% { transform: translate(-26px, 0); }
+  27.2727% { transform: translate(-26px, 0); }
+  36.3636% { transform: translate(0, 0); }
+  45.4545% { transform: translate(0, 0); }
+  54.5454% { transform: translate(0, 0); }
+  63.6363% { transform: translate(0, 0); }
+  72.7272% { transform: translate(0, 26px); }
+  81.8181% { transform: translate(-26px, 26px); }
+  90.9090% { transform: translate(-26px, 0); }
+  100% { transform: translate(0, 0); }
+}
+.banter-loader__box:nth-child(6) { animation: moveBox-6 4s infinite; }
+
+@keyframes moveBox-7 {
+  9.0909% { transform: translate(26px, 0); }
+  18.1818% { transform: translate(26px, 0); }
+  27.2727% { transform: translate(26px, 0); }
+  36.3636% { transform: translate(0, 0); }
+  45.4545% { transform: translate(0, -26px); }
+  54.5454% { transform: translate(26px, -26px); }
+  63.6363% { transform: translate(0, -26px); }
+  72.7272% { transform: translate(0, -26px); }
+  81.8181% { transform: translate(0, 0); }
+  90.9090% { transform: translate(26px, 0); }
+  100% { transform: translate(0, 0); }
+}
+.banter-loader__box:nth-child(7) { animation: moveBox-7 4s infinite; }
+
+@keyframes moveBox-8 {
+  9.0909% { transform: translate(0, 0); }
+  18.1818% { transform: translate(-26px, 0); }
+  27.2727% { transform: translate(-26px, -26px); }
+  36.3636% { transform: translate(0, -26px); }
+  45.4545% { transform: translate(0, -26px); }
+  54.5454% { transform: translate(0, -26px); }
+  63.6363% { transform: translate(0, -26px); }
+  72.7272% { transform: translate(0, -26px); }
+  81.8181% { transform: translate(26px, -26px); }
+  90.9090% { transform: translate(26px, 0); }
+  100% { transform: translate(0, 0); }
+}
+.banter-loader__box:nth-child(8) { animation: moveBox-8 4s infinite; }
+
+@keyframes moveBox-9 {
+  9.0909% { transform: translate(-26px, 0); }
+  18.1818% { transform: translate(-26px, 0); }
+  27.2727% { transform: translate(0, 0); }
+  36.3636% { transform: translate(-26px, 0); }
+  45.4545% { transform: translate(0, 0); }
+  54.5454% { transform: translate(0, 0); }
+  63.6363% { transform: translate(-26px, 0); }
+  72.7272% { transform: translate(-26px, 0); }
+  81.8181% { transform: translate(-52px, 0); }
+  90.9090% { transform: translate(-26px, 0); }
+  100% { transform: translate(0, 0); }
+}
+.banter-loader__box:nth-child(9) { animation: moveBox-9 4s infinite; }

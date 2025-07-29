@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "resume-parser-backend"
+version = "0.1.0"
+description = "Local Flask backend for hybrid résumé parsing"
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+flask = "^2.3.0"
+flask-cors = "^3.0.10"
+python-dotenv = "^1.0.0"
+pymupdf = "^1.23.0"
+pdfplumber = "^0.9.0"
+pytesseract = "^0.3.10"
+Pillow = "^9.5.0"
+spacy = "^3.5.0"
+google-generativeai = "^0.8.5"
+jsonschema = "^4.17.3"
+reportlab = "^4.4.2"
+python-dateutil = "^2.9.0.post0"
+google-genai = "^1.25.0"
+pypdf2 = "^3.0.1"
+borb = "^2.0.0"
+weasyprint = "^61.2"
+jinja2 = "^3.1"
+pdfkit = "^1.0.0"
+celery = { version = "^5.4.7", extras = ["redis"] }
+redis  = "^4.6"
+
+[tool.poetry.dev-dependencies]
+black = "^23.3.0"
+pytest = "^7.3.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
